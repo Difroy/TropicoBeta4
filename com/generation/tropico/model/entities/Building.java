@@ -72,6 +72,8 @@ public abstract class Building {
 		this.name = name;
 	}
 	
+	public abstract String toString();
+	
 	
 	
 }
