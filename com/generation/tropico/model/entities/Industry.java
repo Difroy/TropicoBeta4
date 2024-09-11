@@ -11,4 +11,16 @@ public class Industry extends Activity {
 		
 	}
 
+	@Override
+	public int getIncome() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getTaxes() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
