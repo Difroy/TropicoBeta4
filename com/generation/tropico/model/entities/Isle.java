@@ -21,6 +21,19 @@ public class Isle {
 		this.name = name;
 	}
 
+	
+
+	public int getPopolation() {
+		return popolation;
+	}
+
+
+
+	public void setPopolation(int popolation) {
+		this.popolation = popolation;
+	}
+
+
 
 	public int getWidth() {
 		return width;
