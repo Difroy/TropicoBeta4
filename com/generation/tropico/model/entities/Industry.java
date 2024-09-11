@@ -3,13 +3,14 @@ package com.generation.tropico.model.entities;
 public class Industry extends Activity {
 
 	protected ProductType productType;
+	protected ServiceType serviceType;
 	protected int production;
 
-	public Industry(int id, int x2, int x1, int y2, int y1, String name, int salary, int jobs, ProductType productType,
-			int production) {
+	public Industry(int id, int x2, int x1, int y2, int y1, String name, int salary, int jobs, ProductType productType,ServiceType serviceType,int production) {
 
 		super(id, x2, x1, y2, y1, name, salary, jobs);
 		this.productType = productType;
+		this.serviceType = serviceType;
 		this.production = production;
 
 	}
@@ -38,14 +39,14 @@ public class Industry extends Activity {
 
 	@Override
 	public int getIncome() {
-		return 0;
+		return productType.price * production;
 
 	}
 
 	@Override
 	public int getTaxes() {
 
-		return 0;
+		return (int)(getIncome()*serviceType.getTaxPercentage());
 	}
 
 }
